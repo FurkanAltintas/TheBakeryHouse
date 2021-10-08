@@ -1,0 +1,6 @@
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

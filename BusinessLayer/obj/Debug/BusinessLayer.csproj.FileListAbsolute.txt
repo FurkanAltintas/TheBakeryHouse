@@ -1,0 +1,6 @@
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.pdb
