@@ -96,3 +96,14 @@ C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\obj\Debu
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\obj\Debug\PresentationLayer.dll
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityFramework.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityFramework.SqlServer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityFramework.xml
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\BusinessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\DataAccessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\BusinessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\DataAccessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\DataAccessLayer.dll.config
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\PresentationLayer\bin\EntityLayer.pdb
