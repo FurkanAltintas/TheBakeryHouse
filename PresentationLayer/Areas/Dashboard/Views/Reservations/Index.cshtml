@@ -1,0 +1,49 @@
+﻿@model List<EntityLayer.Concrete.Reservation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+
+    int i = 0;
+}
+
+<table class="table table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Event</th>
+            <th>FullName</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>@i</td>
+                <td>@item.EventId</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Message</td>
+                <td>@item.StartDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.EndDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a href="@Url.Action("Edit","Menu",new { id = item.Id })" data-toggle="tooltip" data-original-title="Edit">
+                        <i class="fa fa-pencil color-muted m-r-5"></i>
+                    </a>
+
+                    <a href="@Url.Action("Delete","Menu", new { id = item.Id })" data-toggle="tooltip" data-original-title="Delete">
+                        <i class="fa fa-close color-muted m-r-5"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
