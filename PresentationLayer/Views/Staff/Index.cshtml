@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<Staff>
+
+<section class="testimonials_area section_gap position-relative">
+    <div class="container">
+        <div class="testi_slider owl-carousel">
+            @foreach (var item in Model)
+            {
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="@item.Url" alt="@item.FullName">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="testi_text">
+                                <h4>@item.FullName</h4>
+                                <h5>@item.Degree</h5>
+                                <p>
+                                    “@item.Description”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
