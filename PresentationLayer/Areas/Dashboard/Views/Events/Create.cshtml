@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Event
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Edit", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success shadow-success px-5">Create Event</button>
+    </div>
+}
