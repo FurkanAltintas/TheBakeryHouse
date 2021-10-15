@@ -1,0 +1,63 @@
+﻿@model EntityLayer.Concrete.Contact
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@Html.Partial("PartialBanner")
+
+<section class="contact_area p_120">
+    <div class="container">
+        <div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
+             data-mlat="40.701083" data-mlon="-74.1522848">
+        </div>
+        <div class="row">
+            @Html.Action("Index","Address")
+            <div class="col-lg-9">
+                @using (Html.BeginForm("Index", "Contact", FormMethod.Post, new { @class = "row contact_form" }))
+                {
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.FullName, new { @class = "form-control", @placeholder = "Enter your name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Enter email address" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @placeholder = "Enter Subject" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.TextAreaFor(x => x.Message, 1, 0, new { @class = "form-control", @placeholder = "Enter Message" })
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+<script src="~/Content/food-bar-gh-pages/js/gmaps.min.js"></script>
+
+@if (ViewBag.Success != null)
+{
+    <script>
+        var strValue = "@((string)ViewBag.Success)";
+    if (strValue != null && strValue != '') {
+        swal({
+            title: "Contact",
+            text: "Your message has been sent",
+            icon: "success",
+            button: "Ok!",
+        });
+    }
+    </script>
+}
+
