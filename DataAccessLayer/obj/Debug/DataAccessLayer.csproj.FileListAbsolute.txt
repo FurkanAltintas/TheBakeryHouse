@@ -4,3 +4,11 @@ C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
