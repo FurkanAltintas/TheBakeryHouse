@@ -1,0 +1,123 @@
+﻿@using EntityLayer.Concrete
+@model List<Gallery>
+
+@{
+    int i = 1;
+}
+<section class="gallery_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title position-relative">
+                    <h1>foodbar galleries</h1>
+                    <hr>
+                    <div class="round-planet planet">
+                        <div class="round-planet planet2">
+                            <div class="shape shape1"></div>
+                            <div class="shape shape2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="lightgallery">
+            @foreach (var item in Model)
+            {
+                if (i == 1)
+                {
+                    <div class="col-lg-7 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+                if (i == 2)
+                {
+                    <div class="col-lg-5 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (i == 3)
+                {
+                    <div class="col-lg-4 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (i == 4)
+                {
+                    <div class="col-lg-4 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (i == 5)
+                {
+                    <div class="col-lg-4 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (i == 6)
+                {
+                    <div class="col-lg-5 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (i == 7)
+                {
+                    <div class="col-lg-7 all-image" data-src="@item.Url">
+                        <div class="single-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="@item.Url" alt="">
+                            <div class="content">
+                                <i class="lnr lnr-picture"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    i = 0;
+                }
+
+                i++;
+            }
+        </div>
+    </div>
+</section>
