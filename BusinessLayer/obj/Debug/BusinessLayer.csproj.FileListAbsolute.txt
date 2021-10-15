@@ -4,3 +4,11 @@ C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\Bu
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\EntityLayer.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\furka\Documents\GitHub\SimpleHouseRestaurant\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
