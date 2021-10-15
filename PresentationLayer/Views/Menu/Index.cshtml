@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@Html.Partial("PartialBanner")
+
+@Html.Action("List","Menu")
+
+@Html.Action("Add","Reservation")
