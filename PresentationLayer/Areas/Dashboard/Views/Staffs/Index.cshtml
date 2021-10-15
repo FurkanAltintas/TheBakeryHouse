@@ -1,0 +1,28 @@
+﻿@model List<EntityLayer.Concrete.Staff>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card-deck">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 mt-3">
+                    <div class="card border border-warning">
+                        <img class="card-img-top" src="@item.Url" alt="@item.FullName">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">@item.FullName (@item.Degree)</h5>
+                            <p class="card-text">@(item.Description == null ? "No description of the personnel has been added.":item.Description)</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">@item.Degree</small>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
