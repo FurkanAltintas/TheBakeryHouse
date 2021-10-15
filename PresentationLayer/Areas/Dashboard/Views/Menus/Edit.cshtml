@@ -1,0 +1,44 @@
+﻿@model EntityLayer.Concrete.Menu
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Menu", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Title" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control", @placeholder = "SubTitle" })
+    </div>
+
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.CurrencyId, (IEnumerable<SelectListItem>)ViewBag.Currency, "Select Currency", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control", @placeholder = "Price", @type = "number", @step = "any", @min = "0", @max = "9999" })
+    </div>
+
+    <div class="form-group">
+        <img src="@Model.Image" />
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control", @type = "file" })
+    </div>
+
+    <div class="form-group">
+        <div class="demo-checkbox">
+            @Html.TextBoxFor(x => x.IsTopRated, new { @class = "filled-in chk-col-primary", @type = "checkbox", @id = "user-checkbox" })
+            <label for="user-checkbox">Top Rated</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success shadow-success px-5">Edit Menu</button>
+    </div>
+}
