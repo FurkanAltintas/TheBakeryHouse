@@ -1,0 +1,49 @@
+﻿@model EntityLayer.Concrete.Reservation
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Reservation", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("FullName")
+        @Html.TextBoxFor(x => x.FullName, new { @class = "form-control", @placeholder = "FullName" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Email")
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Email" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Phone")
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "Phone" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Event")
+        @Html.DropDownListFor(x => x.EventId, (IEnumerable<SelectListItem>)ViewBag.Event, "Select Event", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Start Date")
+        @Html.TextBoxFor(x => x.StartDate, new { @class = "form-control", @type = "date-local" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("End Date")
+        @Html.TextBoxFor(x => x.EndDate, new { @class = "form-control", @type = "date-local" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Message")
+        @Html.TextAreaFor(x => x.Message, 5, 0, new { @class = "form-control", @placeholder = "Message" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn mb-1 btn-flat btn-outline-success">Edit Reservation</button>
+    </div>
+}
+
