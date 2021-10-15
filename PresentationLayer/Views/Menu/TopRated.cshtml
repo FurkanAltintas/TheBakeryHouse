@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Menu>
+
+<section class="top_dish_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title position-relative">
+                    <h1>Our Top Rated Dishes</h1>
+                    <hr>
+                    <div class="round-planet planet">
+                        <div class="round-planet planet2">
+                            <div class="shape shape1"></div>
+                            <div class="shape shape2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="single_dish col-lg-4 col-md-6 text-center">
+                    <div class="thumb">
+                        <img class="img-fluid" src="@item.Image" alt="">
+                    </div>
+                    <h4>@item.Title</h4>
+                    <p>
+                        @item.SubTitle
+                    </p>
+                    <h5 class="price">@item.Price</h5>
+                </div>
+            }
+        </div>
+    </div>
+</section>
