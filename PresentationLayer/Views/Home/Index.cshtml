@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@Html.Action("Index","Banner")
+<!--================ End banner section =================-->
+<!--================ Top Dish Area =================-->
+@Html.Action("TopRated","Menu")
+<!--================ End Top Dish Area =================-->
+<!--================ Menu Area =================-->
+@Html.Action("List","Menu")
+<!--================End Menu Area =================-->
+<!--================ Gallery Area =================-->
+@Html.Action("List","Gallery")
+<!--================ End Gallery Area =================-->
+<!--================Member Area =================-->
+@Html.Action("Index","Staff")
+<!--================End Member Area =================-->
+<!--================Book Table Area =================-->
+@Html.Action("Add", "Reservation")
