@@ -1,0 +1,59 @@
+﻿@model List<EntityLayer.Concrete.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+
+    int i = 0;
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<table class="table table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>FullName</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>History</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>@i</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Subject</td>
+                <td>@item.DateTime.ToString("dd MMMM, yyyy HH:mm") <i class="fa fa-clock-o"></i> </td>
+                <td>
+                    <a id="@item.Id" data-toggle="tooltip" data-original-title="Detail">
+                        <i class="fa fa-file-text text-muted m-r-5"></i>
+                    </a>
+
+                    <script charset="utf-8" type="text/javascript">
+                            $('#@item.Id').click(function () {
+                                swal({
+                                    title: "@item.FullName",
+                                    text: '@Html.Raw(item.Message)',
+                                    confirmButtonText: "Ok",
+                                    closeOnConfirm: false,
+                                    html: true
+                                });
+                            });
+                    </script>
+
+                    <a href="@Url.Action("Delete", "Contacts", new { id = item.Id })" data-toggle="tooltip" data-original-title="Delete">
+                        <i class="fa fa-close text-muted m-r-5"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
