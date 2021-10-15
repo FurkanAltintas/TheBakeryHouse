@@ -42,18 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\About.cs" />
     <Compile Include="Concrete\Address.cs" />
-    <Compile Include="Concrete\Category.cs" />
-    <Compile Include="Concrete\Company.cs" />
+    <Compile Include="Concrete\Authority.cs" />
+    <Compile Include="Concrete\Banner.cs" />
+    <Compile Include="Concrete\BaseEntity.cs" />
     <Compile Include="Concrete\Contact.cs" />
-    <Compile Include="Concrete\History.cs" />
-    <Compile Include="Concrete\Preface.cs" />
-    <Compile Include="Concrete\Product.cs" />
-    <Compile Include="Concrete\Promotion.cs" />
-    <Compile Include="Concrete\Service.cs" />
-    <Compile Include="Concrete\SocialMedia.cs" />
+    <Compile Include="Concrete\Currency.cs" />
+    <Compile Include="Concrete\Employee.cs" />
+    <Compile Include="Concrete\Event.cs" />
+    <Compile Include="Concrete\Gallery.cs" />
+    <Compile Include="Concrete\Mail.cs" />
+    <Compile Include="Concrete\Menu.cs" />
+    <Compile Include="Concrete\Reservation.cs" />
     <Compile Include="Concrete\Staff.cs" />
-    <Compile Include="Concrete\StaffSocialMedia.cs" />
+    <Compile Include="Dto\Calendar.cs" />
+    <Compile Include="Dto\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
