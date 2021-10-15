@@ -1,0 +1,56 @@
+﻿@using EntityLayer.Concrete
+@model List<Menu>
+
+<section class="menu_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title position-relative">
+                    <h1>Our favourite Menu</h1>
+                    <hr>
+                    <div class="round-planet planet">
+                        <div class="round-planet planet2">
+                            <div class="shape shape1"></div>
+                            <div class="shape shape2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row menu_inner">
+            <div class="col-md-12 col-lg-10 col-xl-6">
+                <div class="menu_list pr-0">
+                    <ul class="list">
+                        @foreach (var item in Model.Where(x=>x.Id % 2 != 0))
+                        {
+                            <li>
+                                <h4>
+                                    @item.Title
+                                    <span>@item.Price</span>
+                                </h4>
+                                <p>@item.SubTitle</p>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-10 col-xl-6">
+                <div class="menu_list pr-0">
+                    <ul class="list">
+                        @foreach (var item in Model.Where(x => x.Id % 2 == 0))
+                        {
+                            <li>
+                                <h4>
+                                    @item.Title
+                                    <span>@item.Price</span>
+                                </h4>
+                                <p>@item.SubTitle</p>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
