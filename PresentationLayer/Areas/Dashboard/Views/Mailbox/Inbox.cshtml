@@ -1,0 +1,185 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Mail>
+
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+
+    DateTime datetime = DateTime.Now;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <!-- Left sidebar -->
+                    @Html.Action("Compose", "Mailbox")
+                    <!-- End Left sidebar -->
+                    <!-- Right Sidebar -->
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group mr-1">
+                                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"><i class="fa fa-inbox"></i></button>
+                                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"><i class="fa fa-refresh"></i></button>
+                                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"><i class="fa fa-trash-o"></i></button>
+                                    </div>
+                                    <div class="btn-group mr-1">
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-folder"></i>
+                                            <b class="caret"></b>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="javaScript:void();" class="dropdown-item">Action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Another action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group mr-1">
+                                        <button type="button" class="btn btn-outline-primary waves-effect waves-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-tag"></i>
+                                            <b class="caret"></b>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="javaScript:void();" class="dropdown-item">Action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Another action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-primary waves-effect waves-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            More
+                                            <span class="caret"></span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="javaScript:void();" class="dropdown-item">Action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Another action</a>
+                                            <a href="javaScript:void();" class="dropdown-item">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="javaScript:void();" class="dropdown-item">Separated link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="position-relative has-icon-right">
+                                    <input type="text" class="form-control" placeholder="search mail">
+                                    <div class="form-control-position">
+                                        <i class="fa fa-search text-info"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div> <!-- End row -->
+                        <!--
+                        color :#202124
+                        font-weight: 700
+
+                        -->
+
+                        <div class="card mt-3 shadow-none border border-light">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <div class="mail-checkbox">
+                                                            <input id="checkbox1" class="filled-in chk-col-primary" type="checkbox" checked="checked">
+                                                            <label for="checkbox1">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mail-rateing">
+                                                        <i class="fa fa-star @(item.IsStar == true?"text-warning":"")"></i>
+                                                    </td>
+                                                    <td>
+                                                        <a href="@Url.Action("MailRead")" style="@(item.IsRead == true ? "color: #202124;":"color: black; font-weight: 700;")">@item.Sender</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="@Url.Action("MailRead",new { id = item.Id })" style="color: #202124;">
+                                                            <i class="fa fa-circle text-@(item.IsRead == true ? "success":"danger") mr-1"></i>
+                                                            @if (item.IsRead == true)
+                                                            {
+                                                                @item.Subject
+                                                            }
+                                                            else
+                                                            {
+                                                                <b>@item.Subject</b>
+                                                            }
+                                                            -
+                                                            @if (item.Message.Length > 50)
+                                                            {
+                                                                @item.Message.Substring(0, 50)
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.Message
+                                                            }
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        @if (item.Attachments != null)
+                                                        {
+                                                            <i class="fa fa-paperclip"></i>
+                                                        }
+                                                    </td>
+                                                    <td class="text-right">
+                                                        @if (datetime.Year < item.History.Year)
+                                                        {
+                                                            @item.History
+                                                        }
+                                                        @if (datetime.Year == item.History.Year && datetime.Month == item.History.Month)
+                                                        {
+                                                            if (datetime.Day == item.History.Day)
+                                                            {
+                                                                @item.History.ToString("HH:mm")
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.History.ToString("dd MMMM")
+                                                            }
+                                                        }
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-7">
+                                        Showing 1 - 25 of 300
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="btn-group float-right">
+                                            <button type="button" class="btn btn-outline-secondary waves-effect"><i class="fa fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-outline-secondary waves-effect"><i class="fa fa-chevron-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- card body -->
+                        </div> <!-- card -->
+
+                    </div> <!-- end Col-9 -->
+
+                </div><!-- End row -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
