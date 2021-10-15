@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewBag.Title = "About Us";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<!--================ Banner Area =================-->
+@Html.Partial("PartialBanner")
+<!--================End Banner Area =================-->
+
+<!--================Story Area =================-->
+<section class="about_story_area section_gap">
+    <div class="container">
+        <div class="row story_inner">
+            <div class="col-lg-6">
+                <div class="story_text">
+                    <h2>@Model.Title</h2>
+                    <hr>
+                    <p>
+                        @Model.Description
+                    </p>
+                    <a class="main_btn" href="#">View Full Menu</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="story_img">
+                    <img class="img-fluid" src="@Model.Url" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Story Area =================-->
+
+<!--================Member Area =================-->
+@Html.Action("Index", "Staff")
+<!--================End Member Area =================-->
