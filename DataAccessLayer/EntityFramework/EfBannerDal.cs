@@ -12,12 +12,10 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfBannerDal : GenericRepository<Banner>, IBannerDal
     {
+        Context c = new Context();
         public Banner First()
         {
-            using (var db = new Context())
-            {
-                return db.Banners.FirstOrDefault();
-            }
+            return c.Banners.FirstOrDefault();
         }
     }
 }
