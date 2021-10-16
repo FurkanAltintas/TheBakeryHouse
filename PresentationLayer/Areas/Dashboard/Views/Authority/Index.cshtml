@@ -23,12 +23,12 @@
                 <td>@i</td>
                 <td>@item.Name</td>
                 <td>
-                    <a href="@Url.Action("Delete","Authority",new { id = item.Id })" data-toggle="tooltip" data-original-title="Delete">
-                        <i class="fa fa-close text-muted m-r-5"></i>
-                    </a>
-
                     <a href="@Url.Action("Edit","Authority",new { id = item.Id })" data-toggle="tooltip" data-original-title="Edit">
                         <i class="fa fa-pencil text-muted m-r-5"></i>
+                    </a>
+
+                    <a href="@Url.Action("Delete","Authority",new { id = item.Id })" data-toggle="tooltip" data-original-title="Delete">
+                        <i class="fa fa-close text-muted m-r-5"></i>
                     </a>
                 </td>
             </tr>
