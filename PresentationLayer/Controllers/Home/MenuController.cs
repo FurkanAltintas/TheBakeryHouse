@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class MenuController : Controller
     {
         MenuManager menuManager = new MenuManager(new EfMenuDal());
