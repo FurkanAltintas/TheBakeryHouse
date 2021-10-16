@@ -520,6 +520,7 @@
     <Compile Include="Areas\Dashboard\Controllers\AccountController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\CalendarController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\ContactsController.cs" />
+    <Compile Include="Areas\Dashboard\Controllers\CurrencyController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\EventsController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\HeaderController.cs" />
@@ -620,6 +621,9 @@
     <Content Include="Content\food-bar-gh-pages\vendors\linericon\fonts\Linearicons-Free.ttf" />
     <Content Include="Content\food-bar-gh-pages\vendors\linericon\fonts\Linearicons-Free.woff" />
     <Content Include="Content\food-bar-gh-pages\vendors\linericon\fonts\Linearicons-Free.woff2" />
+    <Content Include="Areas\Dashboard\Views\Currency\Index.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Currency\Create.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Currency\Edit.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
