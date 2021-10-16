@@ -10,6 +10,7 @@ using System.Web.Security;
 
 namespace PresentationLayer.Areas.Dashboard.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         EmployeeManager employeeManager = new EmployeeManager(new EfEmployeeDal());
