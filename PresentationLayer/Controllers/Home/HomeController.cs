@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         // GET: Home
