@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "About", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Title" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextAreaFor(x => x.Description, 10, 0, new { @class = "form-control", @placeholder = "Description" })
+    </div>
+
+    <div class="form-group">
+        <img src="@Model.Url" />
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Url, new { @class = "form-control", @type = "file" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger shadow-danger waves-effect waves-light m-1">Update About</button>
+    </div>}
