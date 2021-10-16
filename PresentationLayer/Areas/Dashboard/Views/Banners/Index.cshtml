@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Banner
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Banners", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = Model.Title })
+    </div>
+
+    <div class="form-group">
+        @Html.TextAreaFor(x => x.SubTitle, 5, 0, new { @class = "form-control", @placeholder = Model.SubTitle })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Button, new { @class = "form-control", @placeholder = Model.Button })
+    </div>
+
+    <div class="form-group">
+        <img src="@Model.Url" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger shadow-danger waves-effect waves-light m-1">Update Banner</button>
+    </div>
+
+}
