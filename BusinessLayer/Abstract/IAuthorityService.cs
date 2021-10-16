@@ -13,5 +13,7 @@ namespace BusinessLayer.Abstract
         void Add(Authority p);
         void Update(Authority p);
         void Delete(Authority p);
+
+        Authority Find(int id);
     }
 }
