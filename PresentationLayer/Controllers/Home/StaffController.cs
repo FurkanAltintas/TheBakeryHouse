@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class StaffController : Controller
     {
         StaffManager staffManager = new StaffManager(new EfStaffDal());
