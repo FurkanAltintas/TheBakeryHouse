@@ -14,8 +14,7 @@ namespace PresentationLayer.Controllers.Home
         // GET: _PartialBanner
         public PartialViewResult Index()
         {
-            var first = bannerManager.First();
-            return PartialView(first);
+            return PartialView(bannerManager.First());
         }
     }
 }
