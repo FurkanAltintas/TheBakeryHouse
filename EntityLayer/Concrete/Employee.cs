@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
         public int Id { get; set; }
         public int AuthorityId { get; set; }
         [ForeignKey("AuthorityId")]
-        public Authority Authority { get; set; }
+        public virtual Authority Authority { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }
         public string UserName { get; set; }
