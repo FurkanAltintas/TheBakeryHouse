@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Address
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Address", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Map, new { @class = "form-control", @placeholder = "Map" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextAreaFor(x => x.Home, 10, 0, new { @class = "form-control", @placeholder = "Address" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextAreaFor(x => x.HomeSubTitle, 5, 0, new { @class = "form-control", @placeholder = "Address" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "Phone" })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.PhoneSubTitle, new { @class = "form-control", @placeholder = "Working Hours" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Email" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.EmailSubTitle, new { @class = "form-control", @placeholder = "Email Message" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger shadow-danger waves-effect waves-light m-1">Edit Address</button>
+    </div>
+}
