@@ -14,7 +14,7 @@ namespace EntityLayer.Concrete
         public int Id { get; set; }
         public int? CurrencyId { get; set; }
         [ForeignKey("CurrencyId")]
-        public Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
         public string Image { get; set; }
