@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class BannerController : Controller
     {
         BannerManager bannerManager = new BannerManager(new EfBannerDal());
