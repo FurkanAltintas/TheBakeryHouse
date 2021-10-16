@@ -14,7 +14,7 @@ namespace EntityLayer.Concrete
         public int Id { get; set; }
         public int EventId { get; set; }
         [ForeignKey("EventId")]
-        public Event Event { get; set; }
+        public virtual Event Event { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
