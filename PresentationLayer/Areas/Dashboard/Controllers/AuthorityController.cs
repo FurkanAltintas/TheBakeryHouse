@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Areas.Dashboard.Controllers
 {
+    [Authorize(Roles = "Yönetici")]
     public class AuthorityController : Controller
     {
         AuthorityManager authorityManager = new AuthorityManager(new EfAuthorityDal());
