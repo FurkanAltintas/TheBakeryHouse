@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,13 @@ namespace PresentationLayer.Controllers.Home
         {
             var first = addressManager.First();
             return PartialView(first);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Address p)
+        {
+            addressManager.Add(p);
+            return RedirectToAction("Index");
         }
     }
 }
