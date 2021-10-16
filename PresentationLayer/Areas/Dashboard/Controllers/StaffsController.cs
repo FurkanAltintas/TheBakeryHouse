@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Areas.Dashboard.Controllers
 {
+    [Authorize(Roles ="Yönetici")]
     public class StaffsController : Controller
     {
         StaffManager staffManager = new StaffManager(new EfStaffDal());
