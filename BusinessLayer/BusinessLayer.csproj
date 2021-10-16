@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IAboutService.cs" />
     <Compile Include="Abstract\IAddressService.cs" />
+    <Compile Include="Abstract\IAuthorityService.cs" />
     <Compile Include="Abstract\IBannerService.cs" />
     <Compile Include="Abstract\IContactService.cs" />
     <Compile Include="Abstract\ICurrencyService.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Abstract\IStaffService.cs" />
     <Compile Include="Concrete\AboutManager.cs" />
     <Compile Include="Concrete\AddressManager.cs" />
+    <Compile Include="Concrete\AuthorityManager.cs" />
     <Compile Include="Concrete\BannerManager.cs" />
     <Compile Include="Concrete\ContactManager.cs" />
     <Compile Include="Concrete\CurrencyManager.cs" />
