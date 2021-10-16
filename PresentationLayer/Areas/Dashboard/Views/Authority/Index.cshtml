@@ -1,0 +1,39 @@
+﻿@model List<EntityLayer.Concrete.Authority>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Dashboard/Views/Shared/_LayoutDashboard.cshtml";
+
+    int i = 0;
+}
+
+<table class="table">
+    <thead class="thead-danger shadow-pinterest">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>@i</td>
+                <td>@item.Name</td>
+                <td>
+                    <a href="@Url.Action("Delete","Authority",new { id = item.Id })" data-toggle="tooltip" data-original-title="Delete">
+                        <i class="fa fa-close text-muted m-r-5"></i>
+                    </a>
+
+                    <a href="@Url.Action("Edit","Authority",new { id = item.Id })" data-toggle="tooltip" data-original-title="Edit">
+                        <i class="fa fa-pencil text-muted m-r-5"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create","Authority")" class="btn btn-danger shadow-pinterest waves-effect waves-light m-1">Authority Create</a>
