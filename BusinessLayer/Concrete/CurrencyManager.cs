@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             _currencyDal.Delete(p);
         }
 
+        public Currency Find(int id)
+        {
+            return _currencyDal.Get(x => x.Id == id);
+        }
+
         public List<Currency> List()
         {
             return _currencyDal.Read();
