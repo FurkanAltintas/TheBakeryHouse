@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             _authorityDal.Delete(p);
         }
 
+        public Authority Find(int id)
+        {
+            return _authorityDal.Get(x => x.Id == id);
+        }
+
         public List<Authority> List()
         {
             return _authorityDal.Read();
