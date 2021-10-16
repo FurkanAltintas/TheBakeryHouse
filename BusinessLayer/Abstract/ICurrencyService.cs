@@ -13,5 +13,7 @@ namespace BusinessLayer.Abstract
         void Add(Currency p);
         void Update(Currency p);
         void Delete(Currency p);
+
+        Currency Find(int id);
     }
 }
