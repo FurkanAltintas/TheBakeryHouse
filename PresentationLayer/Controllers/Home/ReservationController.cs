@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class ReservationController : Controller
     {
         ReservationManager reservationManager = new ReservationManager(new EfReservationDal());
