@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
     <Compile Include="Abstract\IAddressDal.cs" />
+    <Compile Include="Abstract\IAuthorityDal.cs" />
     <Compile Include="Abstract\IBannerDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\ICurrencyDal.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
     <Compile Include="EntityFramework\EfAddressDal.cs" />
+    <Compile Include="EntityFramework\EfAuthorityDal.cs" />
     <Compile Include="EntityFramework\EfBannerDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfCurrencyDal.cs" />
