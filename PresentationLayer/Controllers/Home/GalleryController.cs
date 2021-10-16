@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class GalleryController : Controller
     {
         GalleryManager galleryManager = new GalleryManager(new EfGalleryDal());
