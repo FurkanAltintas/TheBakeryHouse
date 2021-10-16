@@ -62,23 +62,26 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="@Url.Action("Index","Authority")" class="waves-effect">
-                        <i class="icon-key"></i><span>Authority</span>
-                    </a>
-                </li>
+                @if (Roles.IsUserInRole("Yönetici"))
+                {
+                    <li>
+                        <a href="@Url.Action("Index","Authority")" class="waves-effect">
+                            <i class="icon-key"></i><span>Authority</span>
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="@Url.Action("Index","Employee")" class="waves-effect">
-                        <i class="icon-user"></i><span>Employee</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="@Url.Action("Index","Employee")" class="waves-effect">
+                            <i class="icon-user"></i><span>Employee</span>
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="@Url.Action("Index","Staffs")" class="waves-effect">
-                        <i class="icon-people"></i><span>Staffs</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="@Url.Action("Index","Staffs")" class="waves-effect">
+                            <i class="icon-people"></i><span>Staffs</span>
+                        </a>
+                    </li>
+                }
 
                 <li>
                     <a href="@Url.Action("Index","Menus")" class="waves-effect">
