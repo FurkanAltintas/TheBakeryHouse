@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PresentationLayer.Controllers.Home
 {
+    [AllowAnonymous]
     public class AddressController : Controller
     {
         AddressManager addressManager = new AddressManager(new EfAddressDal());
